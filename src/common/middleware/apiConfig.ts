@@ -1124,6 +1124,7 @@ export const apiList = {
     post: {
       PRIVILEGE_CHECK: [
         ...privilegeCatalog.credential.manage.edit,
+        ...privilegeCatalog.usermgmt.applicants.edit,
       ],
       ROLE_CHECK: rolesGroup.superadmin,
     },
@@ -1663,8 +1664,10 @@ export const apiList = {
   '/user/v1/anonymize': createRouteObject({
     post: {
       PRIVILEGE_CHECK: [
-        ...privilegeCatalog.usermgmt.applicants.view,
         ...privilegeCatalog.usermgmt.applicants.edit,
+        ...privilegeCatalog.usermgmt.applicants.edit,
+        ...privilegeCatalog.usermgmt.cohortstudents.edit,
+        ...privilegeCatalog.usermgmt.regionaladmin.edit,
       ],
       ROLE_CHECK: rolesGroup.superadmin,
     },
